@@ -1,122 +1,154 @@
 /* General Styles */
 body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #FFFFFF;
-  color: #2E2E2E;
-  line-height: 1.5;
-}
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #FFFFFF;
+    color: #2E2E2E;
+    line-height: 1.5;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .header-title {
+    font-weight: bold;
+    font-size: 36px;
+  }
+  
+  .header-icon {
+    font-size: 50px;
+  }
+  
+  /* Title and Subtitle Sizes */
+  .title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 36px;
+  }
+  
+  .subtitle {
+    text-align: center;
+    font-size: 28px;
+  }
+  
+  /* Welcome Section */
+  .welcome {
+    text-align: center;
+    max-width: 60%;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  
+  .welcome-image {
+    max-width: 50%;
+  }
+  /* Button Styles */
+  .button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #2E2E2E;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
+  .button:hover {
+    background-color: #444;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
 
-.header-title {
-  font-weight: bold;
-  font-size: 36px;
-}
+  .button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
 
-.header-icon {
-  font-size: 50px;
-}
-
-/* Title and Subtitle Sizes */
-.title {
-  font-weight: bold;
-  text-align: center;
-  font-size: 72px;
-}
-
-.subtitle {
-  text-align: center;
-  font-size: 36px;
-}
-
-/* Welcome Section */
-.welcome {
-  text-align: center;
-  max-width: 60%;
-  margin: 0 auto;
-}
-
-.welcome-image {
-  max-width: 50%;
-}
-
-/* Button Styles */
-.button {
-  --black-700: hsla(0 0% 12% / 1);
-  --border_radius: 9999px;
-  --transtion: 0.3s ease-in-out;
-  --offset: 2px;
-
-  cursor: pointer;
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  transform-origin: center;
-
-  padding: 1rem 2rem;
-  background-color: transparent;
-
-  border: none;
-  border-radius: var(--border_radius);
-  transform: scale(calc(1 + (var(--active, 0) * 0.1)));
-
-  transition: transform var(--transtion);
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 100%;
-  height: 100%;
-  background-color: var(--black-700);
-
-  border-radius: var(--border_radius);
-  box-shadow: inset 0 0.5px hsl(0, 0%, 100%), inset 0 -1px 2px 0 hsl(0, 0%, 0%),
-    0px 4px 10px -4px hsla(0 0% 0% / calc(1 - var(--active, 0))),
-
-  transition: all var(--transtion);
-  z-index: 0;
-}
-
-/* Video Section */
-.video {
-  margin-top: 50px;
-  text-align: center;
-}
-
-.video iframe {
-  width: 60%;
-  height: auto;
-}
-
-/* About Section */
-.about-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  max-width: 60%;
-  margin: 0 auto;
-}
-
-.line {
-  width: 5px;
-  background-color: #2E2E2E;
-}
-
-.profile-pic {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
+  .button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46,46,46,0.3);
+  }
+  
+  
+  /* Video Section */
+  .video {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .video iframe {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* How It Works Section */
+  .how-it-works-item {
+    display: flex;
+    max-width: 60%;
+    margin: 0 auto 50px;
+    gap: 20px;
+  }
+  
+  .how-it-works-item img {
+    width: 50%;
+  }
+  
+  .how-it-works-item .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* CTA Section */
+  .cta {
+    text-align: center;
+  }
+  
+  /* About Section */
+  .about-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+  
+  .line {
+    width: 5px;
+    background-color: #2E2E2E;
+  }
+  
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 36px;
+    }
+    .subtitle {
+      font-size: 20px;
+    }
+    .cta-button {
+      font-size: 20px;
+    }
+    .how-it-works-item {
+      flex-direction: column;
+    }
+    .how-it-works-item img {
+      width: 100%;
+    }
+  }
