@@ -82,11 +82,14 @@ body {
   .video {
     margin-top: 50px;
     text-align: center;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .video iframe {
     width: 100%;
-    height: auto;
+    aspect-ratio: 16/9;
   }
   
   /* How It Works Section */
